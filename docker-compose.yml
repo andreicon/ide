@@ -1,0 +1,11 @@
+version: '2' services:
+    cloud9:
+        image: kdelfour/cloud9-docker
+        volumes_from:
+            - data
+        ports:
+            - "8080:80"
+    data:
+        image: tianon/true
+        volumes:
+            - ./workspace:/workspace
